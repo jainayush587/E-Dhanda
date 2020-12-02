@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "142440665287",
+    "firebase_url": "https://e-dhanda.firebaseio.com",
+    "project_id": "e-dhanda",
+    "storage_bucket": "e-dhanda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142440665287:android:25a5a85970037fdd7aeee2",
+        "android_client_info": {
+          "package_name": "com.example.e_dhanda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142440665287-cmb958hpbo25mqtec1kpkvodvrc3pnk5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.e_dhanda",
+            "certificate_hash": "cec653b6941515cc8ad1437446118fd08cee7676"
+          }
+        },
+        {
+          "client_id": "142440665287-j8voceikq3msf40nr04miui322jdig5b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7Nmu_sReUJUbMqQl8wpUlJVmCR4UBRuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142440665287-j8voceikq3msf40nr04miui322jdig5b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

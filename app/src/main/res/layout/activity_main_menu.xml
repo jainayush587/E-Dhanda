@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="239dp"
+            android:layout_height="173dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/eat_homemade_anywhere"
+            android:textAlignment="center"
+            android:textColor="#070707"
+            android:textSize="18sp"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/SignwithEmail"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnblack"
+            android:drawableLeft="@drawable/whitemail"
+            android:paddingLeft="10dp"
+            android:text="SigIn with Email"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/SignwithPhone"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btnblack"
+            android:drawableLeft="@drawable/phonewhite"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="SignIn with Phone"
+            android:textColor="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="clip_horizontal|center"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <TableRow
+                android:id="@+id/hr"
+                android:layout_width="90dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#474646">
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/OR"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:text="OR"
+                android:textAlignment="center"
+                android:textColor="#090909"
+                android:textSize="17sp" />
+
+            <TableRow
+                android:id="@+id/dr"
+                android:layout_width="90dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#474646" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/Signup"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btnblack"
+            android:text="Signup"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
