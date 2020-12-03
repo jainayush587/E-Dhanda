@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sendotp"></activity>
+        <activity android:name=".Delivery_VerifyPhone"></activity>
+        <activity android:name=".Delivery_sendotp" />
+        <activity android:name=".DeliveryForgotPassword" />
+        <activity android:name=".DeliveryFoodPanel_BottomNavigation" />
+        <activity android:name=".sendotp" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".CustomerFoodPanel_BottomNavigation" />
         <activity android:name=".VerifyPhone" />
