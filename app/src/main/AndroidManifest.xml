@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChefVerifyPhone"></activity>
+        <activity android:name=".Chefsendotp"></activity>
+        <activity android:name=".ChefForgotPassword" />
+        <activity android:name=".ChefFoodPanel_BottomNavigation" />
+        <activity android:name=".ChefVerifyPhone" />
         <activity android:name=".Delivery_Registration" />
         <activity android:name=".Delivery_Loginphone" />
         <activity android:name=".Delivery_Login" />
