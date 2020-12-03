@@ -36,7 +36,7 @@ public class VerifyPhone extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chef_verify_phone);
+        setContentView(R.layout.activity_verify_phone);
 
         phoneno = getIntent().getStringExtra("Phonenumber").trim();
 
@@ -101,7 +101,7 @@ public class VerifyPhone extends AppCompatActivity {
                     public void onTick(long millisUntilFinished) {
 
                         txt.setVisibility(View.VISIBLE);
-                        txt.setText("Resend Code Within"+millisUntilFinished/1000+"Seconds");
+                        txt.setText("Resend Code Within "+millisUntilFinished/1000+" Seconds");
 
                     }
 
