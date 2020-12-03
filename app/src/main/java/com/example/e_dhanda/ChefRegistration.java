@@ -120,9 +120,9 @@ public class ChefRegistration extends AppCompatActivity {
                                                                 public void onClick(DialogInterface dialog, int which) {
 
                                                                     dialog.dismiss();
-                                                                    String phonenumber = Cpp.getSelectedCountryCodeWithPlus() + mobile;
+                                                                    String Phonenumber = Cpp.getSelectedCountryCodeWithPlus() + mobile;
                                                                     Intent b = new Intent(ChefRegistration.this,ChefVerifyPhone.class);
-                                                                    b.putExtra("phonenumber",phonenumber);
+                                                                    b.putExtra("Phonenumber",Phonenumber);
                                                                     startActivity(b);
 
                                                                 }
@@ -146,6 +146,20 @@ public class ChefRegistration extends AppCompatActivity {
                     });
                 }
 //
+            }
+        });
+        Emailbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChefRegistration.this,Cheflogin.class));
+                finish();
+            }
+        });
+        Phonebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChefRegistration.this,Chefloginphone.class));
+                finish();
             }
         });
 

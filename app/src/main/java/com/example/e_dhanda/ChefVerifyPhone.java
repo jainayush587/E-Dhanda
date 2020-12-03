@@ -38,7 +38,7 @@ public class ChefVerifyPhone extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chef_verify_phone);
 
-        phoneno = getIntent().getStringExtra("phonenumber").trim();
+        phoneno = getIntent().getStringExtra("Phonenumber").trim();
 
         entercode = (EditText) findViewById(R.id.code);
         txt = (TextView) findViewById(R.id.text);
