@@ -1,6 +1,7 @@
 package com.example.e_dhanda;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -39,10 +40,10 @@ public class Delivery_Loginphone extends AppCompatActivity {
             public void onClick(View v) {
 
                 number=num.getText().toString().trim();
-                String Phonenum = cpp.getSelectedCountryCodeWithPlus()+number;
+                String Phonenumber = cpp.getSelectedCountryCodeWithPlus()+number;
                 Intent b = new Intent(Delivery_Loginphone.this,Delivery_sendotp.class);
 
-                b.putExtra("Phonenum",Phonenum);
+                b.putExtra("Phonenumber",Phonenumber);
                 startActivity(b);
                 finish();
 

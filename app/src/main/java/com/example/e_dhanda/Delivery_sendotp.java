@@ -40,10 +40,10 @@ public class Delivery_sendotp extends AppCompatActivity {
 
         phoneno = getIntent().getStringExtra("Phonenumber").trim();
 
-        entercode = (EditText) findViewById(R.id.code);
+        entercode = (EditText) findViewById(R.id.Dcode);
         txt = (TextView) findViewById(R.id.text);
-        Resend = (Button)findViewById(R.id.Resendotp);
-        verify = (Button) findViewById(R.id.Verify);
+        Resend = (Button)findViewById(R.id.DResendotp);
+        verify = (Button) findViewById(R.id.DVerify);
         FAuth = FirebaseAuth.getInstance();
 
         Resend.setVisibility(View.INVISIBLE);
