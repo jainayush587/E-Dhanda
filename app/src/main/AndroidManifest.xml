@@ -33,6 +33,7 @@
         <activity android:name=".Cheflogin" />
         <activity android:name=".ChooseOne" />
         <activity android:name=".MainMenu" />
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
