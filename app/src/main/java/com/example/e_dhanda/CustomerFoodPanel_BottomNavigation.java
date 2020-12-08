@@ -3,6 +3,8 @@ package com.example.e_dhanda;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -26,6 +28,22 @@ public class CustomerFoodPanel_BottomNavigation extends AppCompatActivity implem
         setContentView(R.layout.activity_customer_food_panel__bottom_navigation);
         BottomNavigationView navigationView = findViewById(R.id.bottom_navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
+        String name = getIntent().getStringExtra("PAGE");
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        if (name != null){
+            if (name.equalsIgnoreCase("Homepage")){
+                loadcustomerfragment(new CustomerHomeFragment());
+            }else if (name.equalsIgnoreCase("Preparingpage")){
+                loadcustomerfragment(new CustomerTrackFragment());
+            }else if (name.equalsIgnoreCase("DeliveryOrderpage")){
+                loadcustomerfragment(new CustomerOrdersFragment());
+            }else if (name.equalsIgnoreCase("Thankyoupage")){
+                loadcustomerfragment(new CustomerHomeFragment());
+            }
+        }else {
+            loadcustomerfragment(new CustomerHomeFragment());
+        }
     }
 
     @Override
