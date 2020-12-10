@@ -31,6 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class CustomerHomeFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
 
@@ -45,7 +46,7 @@ public class CustomerHomeFragment extends Fragment implements SwipeRefreshLayout
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_customerhome, null);
-        getActivity().setTitle("Home");
+        requireActivity().setTitle("Home");
         setHasOptionsMenu(true);
         recyclerView = v.findViewById(R.id.recycle_menu);
         recyclerView.setHasFixedSize(true);
@@ -53,33 +54,27 @@ public class CustomerHomeFragment extends Fragment implements SwipeRefreshLayout
         recyclerView.startAnimation(animation);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         updateDishModelList = new ArrayList<>();
-        swipeRefreshLayout = (SwipeRefreshLayout)v.findViewById(R.id.swipelayout);
+        swipeRefreshLayout = v.findViewById(R.id.swipelayout);
         swipeRefreshLayout.setOnRefreshListener(this);
         swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimaryDark,R.color.Red);
 
-        swipeRefreshLayout.post(new Runnable() {
-            @Override
-            public void run() {
-                swipeRefreshLayout.setRefreshing(true);
-                String  userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                dataa = FirebaseDatabase.getInstance().getReference("Customer").child(userid);
-                dataa.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+        swipeRefreshLayout.post(() -> {
+            swipeRefreshLayout.setRefreshing(true);
+            String  userid = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
+            dataa = FirebaseDatabase.getInstance().getReference("Customer").child(userid);
+            dataa.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                        Customer custo = snapshot.getValue(Customer.class);
-                        State = custo.getState();
-                        City = custo.getCity();
-                        Area = custo.getArea();
-                        customermenu();
-                    }
+                    Customer custo = snapshot.getValue(Customer.class);
+                    customermenu();
+                }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-                    }
-                });
-            }
+                }
+            });
         });
         return v;
     }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".chefFoodPanel.chef_postDish"></activity>
+        <activity android:name=".chefFoodPanel.UpdateDelete_Dish"></activity>
+        <activity android:name=".chefFoodPanel.chef_postDish" />
         <activity android:name=".Delivery_VerifyPhone" />
         <activity android:name=".Delivery_sendotp" />
         <activity android:name=".DeliveryForgotPassword" />
@@ -33,7 +34,7 @@
         <activity android:name=".Cheflogin" />
         <activity android:name=".ChooseOne" />
         <activity android:name=".MainMenu" />
-        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"/>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

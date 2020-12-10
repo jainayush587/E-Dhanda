@@ -1,6 +1,7 @@
 package com.example.e_dhanda;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -50,30 +51,20 @@ public class CustomerFoodPanel_BottomNavigation extends AppCompatActivity implem
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         Fragment fragment = null;
-        switch (item.getItemId()){
-            case R.id.cust_Home:
-                fragment=new CustomerHomeFragment();
-                break;
+        if (item.getItemId() == R.id.cust_Home) {
+            fragment = new CustomerHomeFragment();
         }
-        switch (item.getItemId()){
-            case R.id.cart:
-                fragment=new CustomerCartFragment();
-                break;
+        if (item.getItemId() == R.id.cart) {
+            fragment = new CustomerCartFragment();
         }
-        switch (item.getItemId()){
-            case R.id.cust_profile:
-                fragment=new CustomerProfileFragment();
-                break;
+        if (item.getItemId() == R.id.cust_profile) {
+            fragment = new CustomerProfileFragment();
         }
-        switch (item.getItemId()){
-            case R.id.Cust_order:
-                fragment=new CustomerOrdersFragment();
-                break;
+        if (item.getItemId() == R.id.Cust_order) {
+            fragment = new CustomerOrdersFragment();
         }
-        switch (item.getItemId()){
-            case R.id.track:
-                fragment=new CustomerTrackFragment();
-                break;
+        if (item.getItemId() == R.id.track) {
+            fragment = new CustomerTrackFragment();
         }
         return loadcustomerfragment(fragment);
 
